@@ -12,7 +12,7 @@ class TestServe(unittest.TestCase)
 
         cls.host_name = ""
 
-        print(f"using base_url={cls.base_url}\n\n")
+        print(f"using host_name={cls.host_name}\n\n")
 
         cls.image_paths = ["cat.png", "ship.png", "automobile.png", "dog.png"]
 
