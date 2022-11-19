@@ -81,7 +81,7 @@ class TIMMLitModule(LightningModule):
         self.val_acc(preds, targets)
         self.log("val/loss", self.val_loss, on_step=False, on_epoch=True, prog_bar=True,sync_dist=True)
         self.log("val/acc", self.val_acc, on_step=False, on_epoch=True, prog_bar=True,sync_dist=True)
-        self.log("hp_metric", loss)
+        self.log("hp_metric", loss, prog_bar=True ,sync_dist=True)
 
         return {"loss": loss, "preds": preds, "targets": targets}
 
