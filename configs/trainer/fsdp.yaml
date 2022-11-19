@@ -6,3 +6,4 @@ strategy: fsdp
 accelerator: gpu
 devices: 1
 precision: 16
+num_nodes: 4
