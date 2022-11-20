@@ -17,9 +17,8 @@ class ImageClassifier(VisionHandler):
     image_processing = T.Compose(
         [
             T.Resize(224),
-            T.CenterCrop(224),
-            T.Normalize((0.49139968, 0.48215827 ,0.44653124), (0.24703233, 0.24348505, 0.26158768)),
-            T.ToTensor()
+            T.ToTensor(),
+            T.Normalize((0.49139968, 0.48215827 ,0.44653124), (0.24703233, 0.24348505, 0.26158768))
         ]
     )
 
