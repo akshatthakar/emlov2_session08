@@ -4,7 +4,7 @@ torchvision==0.10.1
 pytorch-lightning==1.7.1
 torchmetrics==0.9.3
 timm==0.6.7
-fairscale==0.4.12
+fairscale==0.4.6
 # --------- hydra --------- #
 hydra-core==1.2.0
 hydra-colorlog==1.2.0
