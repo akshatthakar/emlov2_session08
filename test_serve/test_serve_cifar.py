@@ -14,15 +14,17 @@ class TestServe(unittest.TestCase)
 
         print(f"using host_name={cls.host_name}\n\n")
 
-        cls.image_paths = ["cat.png", "ship.png", "automobile.png", "dog.png"]
+        cls.image_paths = ["cat.png", "ship.png", "automobile.png", "dog.png","airplane.png","bird.png","deer.png","dog.png","frog.png","horse.png","truck.png”]
 
 
     @pytest.mark.parametrize("host_name", "")
-    def test_mnist_datamodule(host_name):
+    def test_mnist_datamodule():
   
         for image_path in self.image_paths:
+                           
+            complete_path = "images/" + image_path
 
-            response: Response = requests.post(f"http://{self.host_name}:8080/predictions/cifar/1.0", files={'data': open(image_path, 'rb')})
+            response: Response = requests.post(f"http://{self.host_name}:8080/predictions/cifar/1.0", files={'data': open(complete_path, 'rb')})
 
             response_json = res.json()
     
