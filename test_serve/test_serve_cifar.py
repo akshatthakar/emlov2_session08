@@ -14,7 +14,7 @@ class TestServe(unittest.TestCase)
 
         print(f"using host_name={cls.host_name}\n\n")
 
-        cls.image_paths = ["cat.png", "ship.png", "automobile.png", "dog.png","airplane.png","bird.png","deer.png","dog.png","frog.png","horse.png","truck.png”]
+        cls.image_paths = ["cat.png", "ship.png", "automobile.png", "dog.png","airplane.png","bird.png","deer.png","frog.png","horse.png","truck.png”]
 
 
     @pytest.mark.parametrize("host_name", "")
