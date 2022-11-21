@@ -8,13 +8,13 @@ import torch
 class TestServe(unittest.TestCase):
 
    @classmethod
-    def setUpClass(cls):
-        cls.host_name = ""
+   def setUpClass(cls):
+        cls.host_name = "54.64.217.123"
         print(f"using host_name={cls.host_name}\n\n")
-        cls.image_paths = ["cat.png", "ship.png", "automobile.png", "dog.png","airplane.png","bird.png","deer.png","frog.png","horse.png","truck.png”]
+        cls.image_paths = ["cat.png", "ship.png", "automobile.png", "dog.png","airplane.png","bird.png","deer.png","frog.png","horse.png","truck.png"]
 
-    @pytest.mark.parametrize("host_name", "")
-    def test_mnist_datamodule():
+   @pytest
+   def test_cifar_inference(self):
         for image_path in self.image_paths:
             complete_path = "images/" + image_path
             response: Response = requests.post(f"http://{self.host_name}:8080/predictions/cifar/1.0", files={'data': open(complete_path, 'rb')})
