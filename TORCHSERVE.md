@@ -48,7 +48,7 @@ _____________________________________________________
 [32mPASSED[0m
 
 ============================== slowest durations ===============================
-0.50s call     test_serve/test_serve_cifar.py::test_cifar_inference[35.78.219.103]
+0.49s call     test_serve/test_serve_cifar.py::test_cifar_inference[35.78.219.103]
 
 (2 durations < 0.005s hidden.  Use -vv to show these durations.)
-[32m============================== [32m[1m1 passed[0m[32m in 1.10s[0m[32m ===============================[0m
+[32m============================== [32m[1m1 passed[0m[32m in 1.11s[0m[32m ===============================[0m
