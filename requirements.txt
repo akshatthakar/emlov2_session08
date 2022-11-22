@@ -10,6 +10,10 @@ hydra-core==1.2.0
 hydra-colorlog==1.2.0
 hydra-optuna-sweeper==1.2.0
 
+captum
+shap 
+grad-cam
+
 # --------- loggers --------- #
 # wandb
 # neptune-client
