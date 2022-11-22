@@ -24,7 +24,13 @@ Torch Serve to scale serving with workers
 Model - resnet18 was used for training with hardware - 1 x g4dn.xlarge nodes 
 Max Epochs reached - 25
 
+Run tests with command -
+```
 
+cd test_serve
+python3 -m pytest --host 35.78.219.103 -s
+
+```
 
 
 TensorBoard Url-
