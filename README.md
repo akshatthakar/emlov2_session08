@@ -24,6 +24,13 @@ Torch Serve to scale serving with workers
 Model - resnet18 was used for training with hardware - 1 x g4dn.xlarge nodes 
 Max Epochs reached - 25
 
+Torch Serve commands-
+```
+docker run -it --rm --net=host -v `pwd`:/opt/src pytorch/torchserve:latest bash
+cd /opt/src
+torchserve --start --model-store model_store --models cifar=cifar_basic.mar --ts-config  config.properties
+```
+
 Run tests with command -
 ```
 
