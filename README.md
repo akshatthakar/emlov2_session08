@@ -17,7 +17,7 @@ ______________________________________________________________________
 
 ## Description
 
-What it does
+Torch Serve to scale serving with workers
 
 ## How to run
 
