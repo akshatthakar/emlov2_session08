@@ -30,35 +30,5 @@ Max Epochs reached - 25
 TensorBoard Url-
 
 
-Install dependencies
 
-```bash
-# Commands to run on each GPU node
-
-mkdir /home/ubuntu/build
-cd /home/ubuntu/build
-git clone https://github.com/akshatthakar/EML20_session06_assignment-.git
-wget https://bootstrap.pypa.io/get-pip.py
-python3 get-pip.py
-python3 -m pip install awscli
-cd /home/ubuntu/build/EML20_session06_assignment-
-python3 -m pip install -r requirements.txt
-
-
-```
-Commands run on each of the 4 nodes as per sequence/rank
-
-```bash
-# train on CPU
-
-MASTER_PORT=29500 MASTER_ADDR='master node' WORLD_SIZE=4 NODE_RANK=0 nohup python3 src/train.py experiment=cifar trainer=fsdp trainer.devices=1 trainer.num_nodes=4 &
-
-MASTER_PORT=29500 MASTER_ADDR='master node'  WORLD_SIZE=4 NODE_RANK=1 nohup python3 src/train.py experiment=cifar trainer=fsdp trainer.devices=1 trainer.num_nodes=4 &
-
-MASTER_PORT=29500 MASTER_ADDR='master node'  WORLD_SIZE=4 NODE_RANK=2 nohup python3 src/train.py experiment=cifar trainer=fsdp trainer.devices=1 trainer.num_nodes=4 &
-
-MASTER_PORT=29500 MASTER_ADDR='master node'  WORLD_SIZE=4 NODE_RANK=3 nohup python3 src/train.py experiment=cifar trainer=fsdp trainer.devices=1 trainer.num_nodes=4 &
-
-
-```
 
