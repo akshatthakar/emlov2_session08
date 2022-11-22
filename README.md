@@ -33,7 +33,7 @@ python3 -m pytest --host 35.78.219.103 -s
 ```
 Test Results- TORCHSERVE.md
 
-Model Explainability -
+Model Explainability for cat.png-
 
 <img src="cat_integrated_gradient.png?raw=true">
 
